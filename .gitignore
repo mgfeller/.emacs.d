@@ -1,3 +1,7 @@
+# local adjustements at the end of this file
+# ------------------------------------------
+#
+
 # Created by https://www.gitignore.io/api/emacs
 # Edit at https://www.gitignore.io/?templates=emacs
 
@@ -49,3 +53,6 @@ flycheck_*.el
 .dir-locals.el
 
 # End of https://www.gitignore.io/api/emacs
+
+# local adjustements here
+ido.last
