@@ -2,6 +2,8 @@
 
 (set-face-foreground 'minibuffer-prompt "white")
 
+(when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
+
 ;; web-mode
 ;; wget https://raw.githubusercontent.com/fxbois/web-mode/master/web-mode.el
 (require 'web-mode)
