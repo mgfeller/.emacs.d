@@ -4,6 +4,10 @@
 
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
 
+;; bats-mode
+(require 'bats-mode)
+(add-to-list 'auto-mode-alist '("\\.bats\\'" . bats-mode))
+
 ;; web-mode
 ;; wget https://raw.githubusercontent.com/fxbois/web-mode/master/web-mode.el
 (require 'web-mode)
