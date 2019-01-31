@@ -28,6 +28,9 @@
 (setq linum-format "%4d ")
 (global-linum-mode t) ;; enable line numbers globally
 
+;; show cursor position within line
+(column-number-mode 1)
+
 ;; enable elpy python and related packages
 (elpy-enable)
 
@@ -41,6 +44,7 @@
 
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+(setq py-autopep8-options '("--max-line-length=132"))
 
 (add-hook 'python-mode-hook
       (lambda ()
