@@ -15,6 +15,7 @@
     elpy ;; python https://elpy.readthedocs.io/en/latest/ide.html
     py-autopep8 ;; requires autopep8 installed using e.g. pip
     json-mode
+    yaml-mode
     material-theme))
 
 (mapc #'(lambda (package)
@@ -63,6 +64,11 @@
 ;; bats-mode
 (require 'bats-mode)
 (add-to-list 'auto-mode-alist '("\\.bats\\'" . bats-mode))
+
+;; yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
 
 ;; web-mode
 ;; wget https://raw.githubusercontent.com/fxbois/web-mode/master/web-mode.el
