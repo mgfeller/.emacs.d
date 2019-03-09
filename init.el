@@ -16,6 +16,7 @@
     py-autopep8 ;; requires autopep8 installed using e.g. pip
     json-mode
     yaml-mode
+    smooth-scrolling
     material-theme))
 
 (mapc #'(lambda (package)
@@ -97,3 +98,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; smooth scrolling (not by page)
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+(setq smooth-scrolling-margin 5)
