@@ -6,8 +6,7 @@
 
 (package-initialize)
 
-(when (not package-archive-contents)
-  (package-refresh-contents))
+(package-refresh-contents)
 
 (defvar myPackages
   '(better-defaults
@@ -15,6 +14,8 @@
     elpy ;; python https://elpy.readthedocs.io/en/latest/ide.html
     py-autopep8 ;; requires autopep8 installed using e.g. pip
     json-mode
+    groovy-mode
+    markdown-mode
     material-theme))
 
 (mapc #'(lambda (package)
@@ -59,6 +60,10 @@
 (set-face-foreground 'minibuffer-prompt "white")
 
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
+
+;; groovy-mode
+(require 'groovy-mode)
+(add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
 ;; bats-mode
 (require 'bats-mode)
