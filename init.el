@@ -16,6 +16,8 @@
     json-mode
     groovy-mode
     markdown-mode
+    yaml-mode
+    smooth-scrolling
     material-theme))
 
 (mapc #'(lambda (package)
@@ -69,6 +71,11 @@
 (require 'bats-mode)
 (add-to-list 'auto-mode-alist '("\\.bats\\'" . bats-mode))
 
+;; yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
+
 ;; web-mode
 ;; wget https://raw.githubusercontent.com/fxbois/web-mode/master/web-mode.el
 (require 'web-mode)
@@ -96,3 +103,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; smooth scrolling (not by page)
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+(setq smooth-scrolling-margin 5)
