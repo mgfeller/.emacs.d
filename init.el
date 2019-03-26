@@ -17,6 +17,7 @@
     groovy-mode
     markdown-mode
     yaml-mode
+    use-package
     smooth-scrolling
     material-theme))
 
@@ -24,6 +25,12 @@
     (unless (package-installed-p package)
       (package-install package)))
       myPackages)
+
+(require 'use-package)
+
+(use-package scala-mode
+  :interpreter
+  ("scala" . scala-mode))
 
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'material t) ;; load material theme
