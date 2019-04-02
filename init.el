@@ -1,4 +1,5 @@
 ;; some from https://realpython.com/emacs-the-best-python-editor/
+;; https://dougie.io/emacs/indentation/#highlighting-tabs-and-spaces-differently
 (require 'package)
 
 (add-to-list 'package-archives
@@ -26,12 +27,27 @@
       (package-install package)))
       myPackages)
 
+;; tab stuff
+(setq default-tab-width 2)
+
+(global-whitespace-mode)
+(setq whitespace-style '(face tabs tab-mark trailing))
+(custom-set-faces
+ '(whitespace-tab ((t (:foreground "#636363")))))
+
+(setq whitespace-display-mappings
+  '((tab-mark 9 [124 9] [92 9])))
+
+;; (setq tab-stop-list (number-sequence 4 120 4))
+
+;; scala-mode
 (require 'use-package)
 
 (use-package scala-mode
   :interpreter
   ("scala" . scala-mode))
 
+;; general config
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'material t) ;; load material theme
 
@@ -64,6 +80,10 @@
 
 ;; 
 
+(setq indent-tabs-mode nil
+      js-indent-level 2)
+;;
+
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (set-face-foreground 'minibuffer-prompt "white")
@@ -73,6 +93,7 @@
 ;; groovy-mode
 (require 'groovy-mode)
 (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
+(setq groovy-indent-offset 2) ;; was 4, meaning 4 tabs to next indent level
 
 ;; bats-mode
 (require 'bats-mode)
