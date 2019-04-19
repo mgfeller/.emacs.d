@@ -17,6 +17,7 @@
     json-mode
     groovy-mode
     markdown-mode
+		magit
     yaml-mode
     use-package
     smooth-scrolling
@@ -33,6 +34,10 @@
 (global-whitespace-mode)
 (setq whitespace-style '(face tabs tab-mark trailing))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(whitespace-tab ((t (:foreground "#636363")))))
 
 (setq whitespace-display-mappings
@@ -130,14 +135,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (material-theme py-autopep8 elpy flycheck better-defaults))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+	 (quote
+		(material-theme py-autopep8 elpy flycheck better-defaults))))
+
 
 ;; smooth scrolling (not by page)
 (require 'smooth-scrolling)
