@@ -47,11 +47,13 @@
 
 ;; org mode
 ;; The following lines are always needed.  Choose your own keys.
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-cb" 'org-switchb)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c b") 'org-switchb)
 
+(setq org-agenda-files (directory-files-recursively "~/horizon/" "\\.org$"))
+(setq org-directory "~/horizon")
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
@@ -93,7 +95,7 @@
         (setq tab-width 4)
         (setq python-indent-offset 4)))
 
-;; 
+;;
 
 (setq indent-tabs-mode nil
       js-indent-level 2)
@@ -132,15 +134,6 @@
 (ido-mode)
 (ido-everywhere 1)
 (setq ido-case-fold t)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-	 (quote
-		(material-theme py-autopep8 elpy flycheck better-defaults))))
-
 
 ;; smooth scrolling (not by page)
 (require 'smooth-scrolling)
