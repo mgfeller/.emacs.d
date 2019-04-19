@@ -52,6 +52,9 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-switchb)
 
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; scala-mode
 (require 'use-package)
 
