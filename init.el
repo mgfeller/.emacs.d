@@ -17,7 +17,7 @@
     json-mode
     groovy-mode
     markdown-mode
-		magit
+    magit
     yaml-mode
     use-package
     smooth-scrolling
@@ -27,6 +27,13 @@
     (unless (package-installed-p package)
       (package-install package)))
       myPackages)
+
+;; emacs-lis-mode
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 2)))
+
 
 ;; tab stuff
 (setq default-tab-width 2)
@@ -51,9 +58,15 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c b") 'org-switchb)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 2)))
+
 
 (setq org-agenda-files (directory-files-recursively "~/horizon/" "\\.org$"))
 (setq org-directory "~/horizon")
+
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
@@ -120,6 +133,10 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
+(add-hook 'yaml-mode-hook
+      (lambda ()
+        (setq indent-tabs-mode nil)
+        (setq tab-width 2)))
 
 ;; web-mode
 ;; wget https://raw.githubusercontent.com/fxbois/web-mode/master/web-mode.el
@@ -139,3 +156,14 @@
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
 (setq smooth-scrolling-margin 5)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files
+   (quote
+    ("~/horizon/CheatSheet.org" "/home/michael/horizon/Birthdays.org" "/home/michael/horizon/DevOps.org" "/home/michael/horizon/Fagnettverk.org" "/home/michael/horizon/KubernetesIstio.org")))
+ '(package-selected-packages
+   (quote
+    (magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
