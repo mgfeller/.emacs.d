@@ -161,9 +161,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files
-   (quote
-    ("~/horizon/CheatSheet.org" "/home/michael/horizon/Birthdays.org" "/home/michael/horizon/DevOps.org" "/home/michael/horizon/Fagnettverk.org" "/home/michael/horizon/KubernetesIstio.org")))
  '(package-selected-packages
    (quote
     (magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
