@@ -18,6 +18,7 @@
     groovy-mode
     markdown-mode
     magit
+    kubernetes
     yaml-mode
     use-package
     smooth-scrolling
@@ -69,6 +70,11 @@
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; kubernetes
+(use-package kubernetes
+  :ensure t
+  :commands (kubernetes-overview))
 
 ;; scala-mode
 (require 'use-package)
@@ -162,5 +168,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
+	 (quote
+		(magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
