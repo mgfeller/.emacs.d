@@ -2,9 +2,10 @@
 ;; https://dougie.io/emacs/indentation/#highlighting-tabs-and-spaces-differently
 (require 'package)
 
-(add-to-list 'package-archives
-       '("melpa" . "http://melpa.org/packages/") t)
-
+(setq package-archives
+      '(("melpa" . "https://melpa.org/packages/")
+        ("gnu" . "https://elpa.gnu.org/packages/")
+        ("org" . "http://orgmode.org/elpa/")))
 (package-initialize)
 
 (package-refresh-contents)
@@ -18,6 +19,7 @@
     groovy-mode
     markdown-mode
     magit
+    org
     kubernetes
     yaml-mode
     use-package
@@ -169,4 +171,4 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
 	 (quote
-		(magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
+		(org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
