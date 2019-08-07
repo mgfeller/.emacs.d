@@ -95,6 +95,8 @@
 ;; show cursor position within line
 (column-number-mode 1)
 
+(setq-default fill-column 132)
+
 ;; enable elpy python and related packages
 (elpy-enable)
 
