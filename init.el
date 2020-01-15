@@ -77,6 +77,14 @@
 
 (setq org-agenda-files (directory-files-recursively "~/horizon/" "\\.org$"))
 (setq org-directory "~/horizon")
+(setq org-tag-persistent-alist
+      '(("coe")
+        ("aquasec")
+        ("devops")
+        ("ikea")
+        ("dfds")
+        )
+)
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -180,5 +188,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
+	 (quote
+		(org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
