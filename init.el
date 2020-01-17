@@ -83,6 +83,17 @@
         ("devops")
         ("ikea")
         ("dfds")
+        ("anthos")
+        ("networking")
+        ("google")
+        ("azure")
+        ("aws")
+        ("cst")
+        ("fagnett")
+        ("resource")
+        ("iac") ;; infrastructure as code
+        ("terraform")
+        ("technology")
         )
 )
 
