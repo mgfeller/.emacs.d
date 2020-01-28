@@ -94,6 +94,14 @@
         ("iac") ;; infrastructure as code
         ("terraform")
         ("technology")
+        ("gke")
+        ("gke-on-prem")
+        ("security")
+        ("confluence")
+        ("documentation")
+        ("poc")
+        ("kubernetes")
+        ("vsphere")
         )
 )
 
