@@ -22,6 +22,7 @@
     org
     kubernetes
     yaml-mode
+    clojure-mode
     use-package
     smooth-scrolling
     material-theme))
