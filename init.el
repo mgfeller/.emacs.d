@@ -1,4 +1,4 @@
-;; some from https://realpython.com/emacs-the-best-python-editor/
+; some from https://realpython.com/emacs-the-best-python-editor/
 ;; https://dougie.io/emacs/indentation/#highlighting-tabs-and-spaces-differently
 (require 'package)
 
@@ -22,6 +22,7 @@
     org
     kubernetes
     yaml-mode
+    adoc-mode
     clojure-mode
     use-package
     smooth-scrolling
@@ -76,7 +77,10 @@
             (setq tab-width 2)))
 
 
-(setq org-agenda-files (directory-files-recursively "~/horizon/" "\\.org$"))
+(setq org-agenda-files
+      (cl-remove-if (lambda (k)
+                      (string-match "/horizon/templates/" k))
+                    (directory-files-recursively "~/horizon/" "\\.org$")))
 (setq org-directory "~/horizon")
 (setq org-tag-persistent-alist
       '(("coe")
@@ -173,7 +177,10 @@
 
 ;; bats-mode
 (require 'bats-mode)
-(add-to-list 'auto-mode-alist '("\\.bats\\'" . bats-mode))
+
+;; asciidoc mode
+(require 'adoc-mode)
+(add-to-list 'auto-mode-alist '("\\.asc\\'" . adoc-mode))
 
 ;; yaml-mode
 (require 'yaml-mode)
@@ -207,6 +214,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-agenda-files
+   (quote
+    ("/home/michael/horizon/gcp/sre.org" "/home/michael/horizon/gcp/stb.org" "/home/michael/horizon/ikea/ikea.org" "/home/michael/horizon/log/2019-12.org" "/home/michael/horizon/log/2020-01.org" "/home/michael/horizon/log/2020-02.org" "/home/michael/horizon/ssb/ssb.org" "/home/michael/horizon/stb/deployment.org" "/home/michael/horizon/stb/mesh.org" "/home/michael/horizon/Birthdays.org" "/home/michael/horizon/CheatSheet.org" "/home/michael/horizon/DevOps.org" "/home/michael/horizon/EmacsProgramming.org" "/home/michael/horizon/Fagnettverk.org" "/home/michael/horizon/InfrastructureTesting.org" "/home/michael/horizon/KubernetesIstio.org" "/home/michael/horizon/ToDo.org" "/home/michael/horizon/WorkMethods.org" "/home/michael/horizon/ZeroTrust.org" "/home/michael/horizon/a-devops-landscape.org" "/home/michael/horizon/architecture.org" "/home/michael/horizon/books.org" "/home/michael/horizon/ccoe-confuence-structure.org" "/home/michael/horizon/climate.org" "/home/michael/horizon/drone-k3s-linkerd.org" "/home/michael/horizon/go-prog.org" "/home/michael/horizon/monitoring.org" "/home/michael/horizon/quizz.org" "/home/michael/horizon/sre.org" "/home/michael/horizon/terraform.org")))
  '(package-selected-packages
-	 (quote
-		(org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
+   (quote
+    (org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
