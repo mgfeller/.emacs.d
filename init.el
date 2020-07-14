@@ -76,6 +76,8 @@
             (setq indent-tabs-mode nil)
             (setq tab-width 2)))
 
+(setq org-todo-keywords
+      '((sequence "TODO" "DOING" "|" "DONE" "VOID")))
 
 (setq org-agenda-files
       (cl-remove-if (lambda (k)
