@@ -121,6 +121,9 @@
         )
 )
 
+;; set encoding to utf-8
+(set-language-environment "UTF-8")
+
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
