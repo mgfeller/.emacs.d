@@ -77,7 +77,7 @@
             (setq tab-width 2)))
 
 (setq org-todo-keywords
-      '((sequence "TODO" "DOING" "|" "DONE" "VOID")))
+      '((sequence "TODO" "DOING" "|" "DONE" "CANCELLED")))
 
 (setq org-agenda-files
       (cl-remove-if (lambda (k)
