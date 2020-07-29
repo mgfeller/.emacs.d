@@ -39,6 +39,9 @@
             (setq indent-tabs-mode nil)
             (setq tab-width 2)))
 
+;; copy paste stuff
+;; no effect in terminal, there kill/yank and copy/paste are completely divorced
+(setq select-enable-clipboard t)
 
 ;; file stuff
 ;; recent files
@@ -112,6 +115,7 @@
         ("networking")
         ("personal")
         ("poc")
+        ("quote")
         ("resource")
         ("security")
         ("servicemesh")
