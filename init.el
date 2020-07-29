@@ -39,6 +39,9 @@
             (setq indent-tabs-mode nil)
             (setq tab-width 2)))
 
+;; copy paste stuff
+;; no effect in terminal, there kill/yank and copy/paste are completely divorced
+(setq select-enable-clipboard t)
 
 ;; file stuff
 ;; recent files
@@ -85,32 +88,45 @@
                     (directory-files-recursively "~/horizon/" "\\.org$")))
 (setq org-directory "~/horizon")
 (setq org-tag-persistent-alist
-      '(("coe")
-        ("aquasec")
-        ("devops")
-        ("ikea")
-        ("dfds")
+      '(
         ("anthos")
-        ("networking")
-        ("google")
-        ("azure")
+        ("aquasec")
+        ("automation")
         ("aws")
+        ("azure")
+        ("brag")
+        ("coe")
+        ("compliance")
+        ("confluence")
         ("cst")
+        ("datamesh")
+        ("devops")
+        ("dfds")
+        ("documentation")
+        ("eventmesh")
         ("fagnett")
-        ("resource")
-        ("iac") ;; infrastructure as code
-        ("terraform")
-        ("technology")
         ("gke")
         ("gke-on-prem")
-        ("security")
-        ("confluence")
-        ("documentation")
-        ("poc")
+        ("google")
+        ("iac") ;; infrastructure as code
+        ("ikea")
         ("kubernetes")
+        ("mesh")
+        ("networking")
+        ("personal")
+        ("poc")
+        ("quote")
+        ("resource")
+        ("security")
+        ("servicemesh")
+        ("technology")
+        ("terraform")
         ("vsphere")
         )
 )
+
+;; set encoding to utf-8
+(set-language-environment "UTF-8")
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -216,9 +232,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files
-   (quote
-    ("/home/michael/horizon/gcp/sre.org" "/home/michael/horizon/gcp/stb.org" "/home/michael/horizon/ikea/ikea.org" "/home/michael/horizon/log/2019-12.org" "/home/michael/horizon/log/2020-01.org" "/home/michael/horizon/log/2020-02.org" "/home/michael/horizon/ssb/ssb.org" "/home/michael/horizon/stb/deployment.org" "/home/michael/horizon/stb/mesh.org" "/home/michael/horizon/Birthdays.org" "/home/michael/horizon/CheatSheet.org" "/home/michael/horizon/DevOps.org" "/home/michael/horizon/EmacsProgramming.org" "/home/michael/horizon/Fagnettverk.org" "/home/michael/horizon/InfrastructureTesting.org" "/home/michael/horizon/KubernetesIstio.org" "/home/michael/horizon/ToDo.org" "/home/michael/horizon/WorkMethods.org" "/home/michael/horizon/ZeroTrust.org" "/home/michael/horizon/a-devops-landscape.org" "/home/michael/horizon/architecture.org" "/home/michael/horizon/books.org" "/home/michael/horizon/ccoe-confuence-structure.org" "/home/michael/horizon/climate.org" "/home/michael/horizon/drone-k3s-linkerd.org" "/home/michael/horizon/go-prog.org" "/home/michael/horizon/monitoring.org" "/home/michael/horizon/quizz.org" "/home/michael/horizon/sre.org" "/home/michael/horizon/terraform.org")))
  '(package-selected-packages
    (quote
     (org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
