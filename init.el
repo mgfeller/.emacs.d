@@ -91,15 +91,21 @@
       '(
         ("anthos")
         ("aquasec")
+        ("aspenmesh")
+        ("association")
         ("automation")
         ("aws")
         ("azure")
+        ("blog")
         ("brag")
         ("coe")
+        ("community")
         ("compliance")
         ("confluence")
+        ("consul")
         ("cst")
         ("datamesh")
+        ("definition")
         ("devops")
         ("dfds")
         ("documentation")
@@ -110,15 +116,27 @@
         ("google")
         ("iac") ;; infrastructure as code
         ("ikea")
+        ("istio")
+        ("kong")
         ("kubernetes")
+        ("k8s")
+        ("kuma")
+        ("linkerd")
         ("mesh")
+        ("meshery")
         ("networking")
+        ("nginx-sm")
+        ("nsm") ;; network service mesh
+        ("osm") ;; open service mesh
         ("personal")
         ("poc")
+        ("product")
         ("quote")
+        ("raspberrypi")
         ("resource")
         ("security")
-        ("servicemesh")
+        ("soloio")
+        ("term")
         ("technology")
         ("terraform")
         ("vsphere")
@@ -233,5 +251,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults))))
+   '(org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults)))
