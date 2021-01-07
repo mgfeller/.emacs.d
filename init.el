@@ -131,6 +131,7 @@
         ("personal")
         ("poc")
         ("product")
+        ("publication")
         ("quote")
         ("raspberrypi")
         ("resource")
