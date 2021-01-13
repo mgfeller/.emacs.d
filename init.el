@@ -26,7 +26,10 @@
     clojure-mode
     use-package
     smooth-scrolling
-    material-theme))
+;;    material-theme
+    powerline
+    moe-theme
+    ))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
@@ -90,6 +93,7 @@
 (setq org-tag-persistent-alist
       '(
         ("anthos")
+        ("apigateway")
         ("aquasec")
         ("aspenmesh")
         ("association")
@@ -170,12 +174,22 @@
   :interpreter
   ("scala" . scala-mode))
 
+;; theme
+;; (load-theme 'material-light t) ;; load material theme
+;; https://github.com/kuanyui/moe-theme.el
+(require 'powerline)
+(require 'moe-theme)
+(load-theme 'moe-dark t)
+(powerline-moe-theme)
+;;or
+;;(load-theme 'moe-light t)
+
 ;; general config
 (setq inhibit-startup-message t) ;; hide the startup message
-(load-theme 'material t) ;; load material theme
-
 (setq linum-format "%4d ")
 (global-linum-mode t) ;; enable line numbers globally
+(show-paren-mode t)
+(setq show-paren-style 'expression)
 
 ;; show cursor position within line
 (column-number-mode 1)
@@ -259,5 +273,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("27a1dd6378f3782a593cc83e108a35c2b93e5ecc3bd9057313e1d88462701fcd" default))
  '(package-selected-packages
-   '(org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults)))
+   '(moe-theme darktooth-theme org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults)))
