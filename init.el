@@ -103,6 +103,7 @@
         ("blog")
         ("book")
         ("brag")
+        ("certificate")
         ("climate")
         ("coe")
         ("community")
@@ -132,6 +133,7 @@
         ("linkerd")
         ("mesh")
         ("meshery")
+        ("mtls")
         ("networking")
         ("nginx-sm")
         ("nsm") ;; network service mesh
@@ -152,6 +154,7 @@
         ("term")
         ("technology")
         ("terraform")
+        ("video")
         ("vsphere")
         )
 )
