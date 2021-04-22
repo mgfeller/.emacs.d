@@ -162,6 +162,7 @@
         ("terraform")
         ("video")
         ("vsphere")
+        ("zerotrust")
         )
 )
 
@@ -285,6 +286,6 @@
  '(custom-safe-themes
    '("27a1dd6378f3782a593cc83e108a35c2b93e5ecc3bd9057313e1d88462701fcd" default))
  '(org-agenda-files
-   '("~/horizon/gcp/sre.org" "~/horizon/gcp/stb.org" "~/horizon/ikea/ccoe-confluence-structure.org" "~/horizon/ikea/ikea.org" "~/horizon/ikea/service-mesh-poc.org" "~/horizon/log/archive/2019-12.org" "~/horizon/log/archive/2020-01.org" "~/horizon/log/archive/2020-02.org" "~/horizon/log/2021-01.org" "~/horizon/ssb/ssb.org" "~/horizon/stb/deployment.org" "~/horizon/stb/mesh.org" "~/horizon/Birthdays.org" "~/horizon/CheatSheet.org" "~/horizon/DevOps.org" "~/horizon/EmacsProgramming.org" "~/horizon/Fagnettverk.org" "~/horizon/InfrastructureTesting.org" "~/horizon/ToDo.org" "~/horizon/WorkMethods.org" "~/horizon/ZeroTrust.org" "~/horizon/a-devops-landscape.org" "~/horizon/architecture.org" "~/horizon/books.org" "~/horizon/career.org" "~/horizon/climate.org" "~/horizon/command-line.org" "~/horizon/drone-k3s-linkerd.org" "~/horizon/go-prog.org" "~/horizon/ideas.org" "~/horizon/kubernetes.org" "~/horizon/meshery-consul.org" "~/horizon/monitoring.org" "~/horizon/quizz.org" "~/horizon/quotes.org" "~/horizon/service-mesh.org" "~/horizon/sre.org" "~/horizon/terraform.org" "~/horizon/tools.org"))
+   '("~/horizon/gcp/sre.org" "~/horizon/gcp/stb.org" "~/horizon/ikea/ccoe-confluence-structure.org" "~/horizon/ikea/ikea.org" "~/horizon/ikea/service-mesh-poc.org" "~/horizon/log/archive/2019-12.org" "~/horizon/log/archive/2020-01.org" "~/horizon/log/archive/2020-02.org" "~/horizon/log/2021-01.org" "~/horizon/ssb/ssb.org" "~/horizon/stb/deployment.org" "~/horizon/stb/mesh.org" "~/horizon/Birthdays.org" "~/horizon/CheatSheet.org" "~/horizon/DevOps.org" "~/horizon/EmacsProgramming.org" "~/horizon/Fagnettverk.org" "~/horizon/InfrastructureTesting.org" "~/horizon/ToDo.org" "~/horizon/WorkMethods.org" "~/horizon/Zero0Trust.org" "~/horizon/a-devops-landscape.org" "~/horizon/architecture.org" "~/horizon/books.org" "~/horizon/career.org" "~/horizon/climate.org" "~/horizon/command-line.org" "~/horizon/drone-k3s-linkerd.org" "~/horizon/go-prog.org" "~/horizon/ideas.org" "~/horizon/kubernetes.org" "~/horizon/meshery-consul.org" "~/horizon/monitoring.org" "~/horizon/quizz.org" "~/horizon/quotes.org" "~/horizon/service-mesh.org" "~/horizon/sre.org" "~/horizon/terraform.org" "~/horizon/tools.org"))
  '(package-selected-packages
    '(moe-theme darktooth-theme org magit yaml-mode use-package smooth-scrolling scala-mode py-autopep8 origami material-theme markdown-mode json-mode groovy-mode flycheck elpy better-defaults)))
